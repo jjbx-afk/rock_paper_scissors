@@ -31,13 +31,13 @@ function getComputerChoice() {
 function playGame() {
     humanScore = 0;
     computerScore = 0;
-    //boucle pour répeter la procédur pour chaque round
-    for (let i = 0; i <= 4; i++) { 
+    //boucle pour répeter la procédure pour chaque round
+    // for (let i = 0; i <= 4; i++) { 
         // console.log("%cRound " + Number(i+1), "font-weight:bold")
         playRound();
         console.log("Human score: ", humanScore);
         console.log("Computer score: ", computerScore);
-    }
+    // }
     //affichage du score finale 
     console.log("Final scores => Human: " + humanScore + ", Computer: " + computerScore + "."); 
     //affichage de message de victoire/échec a l'aide d'une condition  
@@ -124,6 +124,19 @@ if (restartingChoice === "yes"){
 }
 else if (restatignChoice === "no") {
 
-  die("Thanks for playing! see ya!");
+  return("Thanks for playing! see ya!");
 
 }
+
+
+
+
+
+
+
+// creating 3 button 'Rock', 'Paper', 'scissors'
+
+
+var rock = document.create.Element("Rock");
+var paper = document.create.Element("Paper");
+var scissiors = document.create.Element("Scissors");

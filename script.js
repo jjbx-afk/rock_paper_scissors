@@ -22,7 +22,7 @@ function getComputerChoice() {
         choice = "scissors";
     }
 
-    console.log("Computer's choice", choice);
+    console.log("Computer's choice:", choice);
 
     return choice;
 
@@ -31,24 +31,26 @@ function getComputerChoice() {
 
 function getHumanChoice() {  
 
-        let choice = ("rock, paper or scissors? :").toLowerCase();
-        let inputChoice = prompt(choice);
-    
+    let choice = prompt("rock, paper or scissors? :").toLowerCase();
+
+    console.log(choice);
+
     if (["rock", "scissors", "paper"].includes(choice)) {
         console.log("your choice: ", choice);
-
+        return choice;
+        
     } else { 
-        console.log(inputChoice);
         console.error("Choix invalide, les choix possibles sont: paper, scissors, rock");
     }
-
 }
 
 let humanScore = 0; 
 let computerScore = 0;
 
+
 function playRound(humanChoice, computerChoice) {
 
+    console.log(humanChoice);
 
     if (humanChoice == "rock" && computerChoice == "scissors"){
         humanScore++;
@@ -71,44 +73,37 @@ function playRound(humanChoice, computerChoice) {
 
     } else if (humanChoice == "scissors" && computerChoice == "paper"){
         humanScore++;
+
         return "You Win! Scissiors beats paper"; 
+
     } else if (humanChoice == "scissors" && computerChoice == "rock"){
         computerScore++;
+
         return "You lose.. Rock beats scissors";
+
     } else if (humanChoice == computerChoice) {
         return "It's a tie. you picked the same choice.";
+
     } else {
-        return "Error"
+        return "Errorrr";
     }                                                          
-} 
+}  
+
 
 const humanChoice = getHumanChoice();
 const computerChoice = getComputerChoice();
 
-playRound(humanChoice, computerChoice);
 
-console.log(playRound(humanSelection, computerSelection))
+console.log(playRound(humanChoice, computerChoice));
 
-console.log(playGame);
-
-
-// playGame() //relancer une nouvelle game 
-
-// // playGame()
 
 // restartingChoice = prompt("do you want to restart ? (yes/no)").toLowerCase();
-
 // if (restartingChoice === "yes"){
-//      playGame()
+//     playGame();
 // }
 // else if (restatignChoice === "no") {
-
-//   die("Thanks for playing! see ya!");
-
+// console.log("Thanks for playing! see ya!");
 // }
-
-
-
 // game du jeu 
 // function playGame() {
 //     humanScore = 0;
@@ -116,15 +111,16 @@ console.log(playGame);
 //     //boucle pour répeter la procédur pour chaque round
 //     for (let i = 0; i <= 4; i++) { 
 //         // console.log("%cRound " + Number(i+1), "font-weight:bold")
-//         playRound();
-//         console.log("Human score: ", humanScore);
-//         console.log("Computer score: ", computerScore);
-//     }
-//     //affichage du score finale 
-//     console.log("Final scores => Human: " + humanScore + ", Computer: " + computerScore + "."); 
-//     //affichage de message de victoire/échec a l'aide d'une condition  
-//     console.log(humanScore > computerScore ? "You win" : (humanScore < computerScore ? "you loose" : "tie")); 
-    
-//     // façon + verbale pour reproduire la condition d'en haut : 
 
+    //     playRound();
+    //     console.log("Human score: ", humanScore);
+    //     console.log("Computer score: ", computerScore);
+    // // }
+
+    // //affichage du score finale 
+    // console.log("Final scores => Human: " + humanScore + ", Computer: " + computerScore + "."); 
+    // //affichage de message de victoire/échec a l'aide d'une condition  
+    // console.log(humanScore > computerScore ? "You win" : (humanScore < computerScore ? "you loose" : "tie")); 
+    
+    // façon + verbale pour reproduire la condition d'en haut : 
 // }

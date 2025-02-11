@@ -97,6 +97,24 @@ const computerChoice = getComputerChoice();
 console.log(playRound(humanChoice, computerChoice));
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // restartingChoice = prompt("do you want to restart ? (yes/no)").toLowerCase();
 // if (restartingChoice === "yes"){
 //     playGame();

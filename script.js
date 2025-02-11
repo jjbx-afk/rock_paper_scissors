@@ -1,142 +1,126 @@
+// // random computer choice
+// function getComputerChoice() {  
 
-//variables du score réutiliser dans les fonctions 
-let humanScore; 
-let computerScore;
+//     let random = Math.floor(Math.random() * 3);
 
+//     if (random === 0) {
+//         choice = "rock";
+//     }
 
-// random computer choice
-function getComputerChoice() {  
+//     else if (random === 1) {
+//         choice = "paper";
+//     }
 
-    let random = Math.floor(Math.random() * 3);
-    let choice;
+//     else if (random === 2) {
+//         choice = "scissors";
+//     }
 
-    if (random === 0) {
-        choice = "rock";
-    }
+//     console.log("Computer's choice:", choice);
 
-    else if (random === 1) {
-        choice = "paper";
-    }
+//     return choice;
 
-    else if (random === 2) {
-        choice = "scissors";
-    }
-
-    console.log("Computer's choice", choice);
-    return choice;
-
-} 
-
-// game du jeu 
-function playGame() {
-    humanScore = 0;
-    computerScore = 0;
-    //boucle pour répeter la procédure pour chaque round
-    // for (let i = 0; i <= 4; i++) { 
-        // console.log("%cRound " + Number(i+1), "font-weight:bold")
-        playRound();
-        console.log("Human score: ", humanScore);
-        console.log("Computer score: ", computerScore);
-    // }
-    //affichage du score finale 
-    console.log("Final scores => Human: " + humanScore + ", Computer: " + computerScore + "."); 
-    //affichage de message de victoire/échec a l'aide d'une condition  
-    console.log(humanScore > computerScore ? "You win" : (humanScore < computerScore ? "you loose" : "tie")); 
-    
-    // façon + verbale pour reproduire la condition d'en haut : 
-
-    // if (humanScore > computerScore) {
-    //     console.log("You win");
-    // } else {
-    //     if (humanScore < computerScore) {
-    //         console.log("you loose");
-    //     } else {
-    //         console.log("tie")
-    //     }
-    // }
-}
-// input for human choice
-function getHumanChoice() {  
-
-     let choice = prompt("rock, paper or scissors? :").toLowerCase()
- 
-    if (["rock", "scissors", "paper"].includes(choice)) {
-        console.log("your choice: ", choice);
-        return choice;
-    } else { 
-        console.error("Choix invalide, les choix possibles sont: paper, scissors, rock")
-    }
+// } 
 
 
-    // Si "choice" n'est pas une des trois valeurs possibles
-    // Alors faire
-    // return choice;
-}
+// function getHumanChoice() {  
 
-//fonction permettant de jouer un round et repris dand la boucle for dans la fonction de la game
-function playRound() {
+//     let choice = prompt("rock, paper or scissors? :").toLowerCase();
 
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
+//     console.log(choice);
 
-    if (humanChoice == "rock" && computerChoice == "scissors"){
-        humanScore++;
-        return "You Win! Rock beats scissors";
-    } else if (humanChoice == "rock" && computerChoice == "paper"){
-        computerScore++;
-        return "You lose.. Paper beats rock"; 
-    } else if (humanChoice == "paper" && computerChoice == "rock"){
-        // humanScore = humanScore + 1;
-        // humanScore += 1;
-        humanScore++;
-        return "You Win! Paper beats rock ";
-    } else if (humanChoice == "paper" && computerChoice == "scissors"){
-        computerScore++;
-        return "You lose.. Scissors beats paper"; 
-    } else if (humanChoice == "scissors" && computerChoice == "paper"){
-        humanScore++;
-        return "You Win! Scissiors beats paper"; 
-    } else if (humanChoice == "scissors" && computerChoice == "rock"){
-        computerScore++;
-        return "You lose.. Rock beats scissors";
-    } else if (humanChoice == computerChoice) {
-        return "It's a tie. you picked the same choice.";
-    } else {
-        return "Error"
-    }                                                          
-} 
+//     if (["rock", "scissors", "paper"].includes(choice)) {
+//         console.log("your choice: ", choice);
+//         return choice;
+        
+//     } else { 
+//         console.error("Choix invalide, les choix possibles sont: paper, scissors, rock");
+//     }
+// }
+
+// let humanScore = 0; 
+// let computerScore = 0;
+
+
+// function playRound(humanChoice, computerChoice) {
+
+//     console.log(humanChoice);
+
+//     if (humanChoice == "rock" && computerChoice == "scissors"){
+//         humanScore++;
+//         return "You Win! Rock beats scissors";
+
+//     } else if (humanChoice == "rock" && computerChoice == "paper"){
+//         computerScore++;
+
+//         return "You lose.. Paper beats rock"; 
+
+//     } else if (humanChoice == "paper" && computerChoice == "rock"){
+//         humanScore++;
+
+//         return "You Win! Paper beats rock ";
+
+//     } else if (humanChoice == "paper" && computerChoice == "scissors"){
+//         computerScore++;
+
+//         return "You lose.. Scissors beats paper"; 
+
+//     } else if (humanChoice == "scissors" && computerChoice == "paper"){
+//         humanScore++;
+
+//         return "You Win! Scissiors beats paper"; 
+
+//     } else if (humanChoice == "scissors" && computerChoice == "rock"){
+//         computerScore++;
+
+//         return "You lose.. Rock beats scissors";
+
+//     } else if (humanChoice == computerChoice) {
+//         return "It's a tie. you picked the same choice.";
+
+//     } else {
+//         return "Errorrr";
+//     }                                                          
+// }  
+
+
+// const humanChoice = getHumanChoice();
+// const computerChoice = getComputerChoice();
+
+
+// console.log(playRound(humanChoice, computerChoice));
 
 // console.log(playRound(humanSelection, computerSelection))
-
-
-
 // console.log(playGame);
 
 
-playGame() //relancer une nouvelle game 
+// playGame() //relancer une nouvelle game 
 
-// playGame()
+// // playGame()
 
-restartingChoice = prompt("do you want to restart ? (yes/no)").toLowerCase();
+// restartingChoice = prompt("do you want to restart ? (yes/no)").toLowerCase();
 
-if (restartingChoice === "yes"){
-     playGame()
-}
-else if (restatignChoice === "no") {
+// if (restartingChoice === "yes"){
+//      playGame()
+// }
+// else if (restatignChoice === "no") {
 
-  return("Thanks for playing! see ya!");
+//   return("Thanks for playing! see ya!");
 
-}
-
-
-
-
-
-
+// }
 
 // creating 3 button 'Rock', 'Paper', 'scissors'
 
+var div = document.createElement("Rock");
+div.textContent = "Rock!";
+div.classList.add("button-rock");
+document.body.appendChild(div); 
 
-var rock = document.create.Element("Rock");
-var paper = document.create.Element("Paper");
-var scissiors = document.create.Element("Scissors");
+var div = document.createElement("Paper");
+div.textContent = "Paper!";
+div.classList.add("button-paper");
+document.body.appendChild(div); 
+
+var div = document.createElement("scissors");
+div.textContent = "Scissors!";
+div.classList.add("button-scissors");
+document.body.appendChild(div); 

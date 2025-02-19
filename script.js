@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 
-
-
-// variables du score réutiliser dans les fonctions 
-
-
-
-=======
->>>>>>> rps-ui
-// random computer choice
 const rockBtn = document.createElement("button");
 rockBtn.textContent = "rock!";
 rockBtn.classList.add("button");
@@ -41,7 +31,6 @@ function getComputerChoice() {
         choice = "scissors";
     }
 
-<<<<<<< HEAD
     console.log("Computer's choice:", choice);
 
     return choice;
@@ -116,4 +105,3 @@ const computerChoice = getComputerChoice();
 
 console.log(playRound(humanChoice, computerChoice));
 
->>>>>>> rps-ui

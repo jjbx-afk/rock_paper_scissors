@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,8 +6,26 @@
 
 
 
+=======
+>>>>>>> rps-ui
 // random computer choice
-function getComputerChoice() {  
+const rockBtn = document.createElement("button");
+rockBtn.textContent = "rock!";
+rockBtn.classList.add("button");
+document.body.appendChild(rockBtn);
+
+const paperBtn = document.createElement("button");
+paperBtn.textContent = "paper!";
+paperBtn.classList.add("button");
+document.body.appendChild(paperBtn);
+
+const scissorsBtn = document.createElement("button");
+scissorsBtn.textContent = "scissors!";
+scissorsBtn.classList.add("button");
+document.body.appendChild(scissorsBtn);
+
+
+function getComputerChoice() {
 
     let random = Math.floor(Math.random() * 3);
 
@@ -22,6 +41,7 @@ function getComputerChoice() {
         choice = "scissors";
     }
 
+<<<<<<< HEAD
     console.log("Computer's choice:", choice);
 
     return choice;
@@ -96,49 +116,4 @@ const computerChoice = getComputerChoice();
 
 console.log(playRound(humanChoice, computerChoice));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// restartingChoice = prompt("do you want to restart ? (yes/no)").toLowerCase();
-// if (restartingChoice === "yes"){
-//     playGame();
-// }
-// else if (restatignChoice === "no") {
-// console.log("Thanks for playing! see ya!");
-// }
-// game du jeu 
-// function playGame() {
-//     humanScore = 0;
-//     computerScore = 0;
-//     //boucle pour répeter la procédur pour chaque round
-//     for (let i = 0; i <= 4; i++) { 
-//         // console.log("%cRound " + Number(i+1), "font-weight:bold")
-
-    //     playRound();
-    //     console.log("Human score: ", humanScore);
-    //     console.log("Computer score: ", computerScore);
-    // // }
-
-    // //affichage du score finale 
-    // console.log("Final scores => Human: " + humanScore + ", Computer: " + computerScore + "."); 
-    // //affichage de message de victoire/échec a l'aide d'une condition  
-    // console.log(humanScore > computerScore ? "You win" : (humanScore < computerScore ? "you loose" : "tie")); 
-    
-    // façon + verbale pour reproduire la condition d'en haut : 
-// }
+>>>>>>> rps-ui
